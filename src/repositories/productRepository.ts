@@ -1,5 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
+import { randomUUID } from "crypto";
 
 import { Product, ProductInput, Result } from "../types";
 
@@ -15,10 +16,13 @@ const isEmpty = (s: string) => !s.trim();
 async function readProducts(): Promise<Product[]> {
   try {
     const data = await fs.readFile(filePath, "utf-8");
-    return data ? JSON.parse(data) : [];
+    
+    if(!data.trim()) return [];
+    
+    return JSON.parse(data) as Product[];
   } catch(error) {
-    console.error("Failed to read products file", error);
-    return [];
+    console.error("Failed to read products file:", error);
+    throw error;
   };
 };
 
@@ -75,7 +79,7 @@ export async function createProduct(data: ProductInput): Promise<Result<Product>
   };
   
   const newProduct: Product = {
-    id: crypto.randomUUID(),
+    id: randomUUID(),
     name: data.name,
     price: data.price,
     stock: data.stock
