@@ -28,10 +28,11 @@ The project demonstrates a simple layered architecture using file-based storage.
 
 ```txt
 src/
-├── controllers/     # HTTP handlers
-├── services/        # Business logic
-├── repositories/    # Data access layer (file system)
-├── routes/          # API routes
-├── types/           # Type definitions
+├── controllers/    
+├── middlewares/ 
+├── repositories/  
+├── routes/       
+├── services/        
+├── types/
 └── data/
     └── products.json

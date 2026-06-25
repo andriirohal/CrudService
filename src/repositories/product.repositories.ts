@@ -8,7 +8,9 @@ const filePath = path.join(process.cwd(), "src/data/products.json");
 export async function readProducts(): Promise<Product[]> {
   const data = await fs.readFile(filePath, "utf-8");
     
-  if(!data.trim()) return [];
+  if(!data || !data.trim()) {
+    return [];
+  };
   
   return JSON.parse(data) as Product[];
 };
