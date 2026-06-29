@@ -15,10 +15,10 @@ export const validateId = (req: Request<{id: string}>, res: Response, next: Next
 };
 
 export const errorHandler = (error: Error, req: Request, res: Response, next: NextFunction) => {
-  console.error(error);
+  console.error(error.message);
 
   return res.status(500).json({
     success: false,
-    error: "Something went wrong on the server"
+    error: "Internal server error"
   });
 };
