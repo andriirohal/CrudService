@@ -1,6 +1,6 @@
-# 🧩 Express CRUD Service
+# 🚀 Express CRUD Service
 
-A REST API built with Node.js, Express, and TypeScript. The project demonstrates a simple layered architecture backed by a PostgreSQL database.
+A REST API built with Node.js, Express, and TypeScript, featuring a clean layered architecture and PostgreSQL as the persistence layer.
 
 ---
 
@@ -11,11 +11,8 @@ A REST API built with Node.js, Express, and TypeScript. The project demonstrates
 - Create new product
 - Update product by ID
 - Delete product by ID
-- Type-safe implementation with TypeScript
+- Type-safe with TypeScript
 - PostgreSQL persistence
-- Environment-based configuration
-
----
 
 ## 🛠️ Tech Stack
 
@@ -31,18 +28,12 @@ A REST API built with Node.js, Express, and TypeScript. The project demonstrates
 
 ```txt
 src/
-├── config/          # Database pool & configuration
-├── controllers/     # HTTP request handlers
-├── middlewares/     # Express middlewares
-├── routes/          # Route definitions
-├── services/        # Business logic layer
-├── types/           # TypeScript types & interfaces
-├── app.ts           # Express application setup
-└── server.ts        # Application entry point
+├── config/        
+├── controllers/     
+├── middlewares/      
+├── routes/          
+├── services/          
+├── types/         
+├── app.ts            
+└── server.ts            
 ```
-
----
-
-## 📄 License 
-
-MIT
