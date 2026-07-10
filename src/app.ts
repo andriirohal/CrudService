@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.use("/products", router);
 
-app.get("/", (req: Request, res: Response) => {
+app.get("/", (_req: Request, res: Response) => {
   res.sendStatus(200);
 });
 
