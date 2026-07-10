@@ -1,7 +1,6 @@
 import { performance } from "node:perf_hooks";
 
-import type { Product, ProductInput, Result } from "../types";
-import { pool } from "../config";
+import { Product, ProductInput, Result, pool } from "../core";
 
 const isValidPrice = (price: unknown): price is number =>
   typeof price === "number" && Number.isFinite(price) && price >= 0;

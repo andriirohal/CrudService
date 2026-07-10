@@ -1,4 +1,4 @@
-# 🧩 Express CRUD Service
+# 🧩 CRUD Service
 
 A REST API built with Node.js, Express, and TypeScript, featuring a clean layered architecture and PostgreSQL as the persistence layer.
 
@@ -31,7 +31,8 @@ A REST API built with Node.js, Express, and TypeScript, featuring a clean layere
 ```txt
 src/
 ├── config/        
-├── controllers/     
+├── controllers/
+├── core/     
 ├── middlewares/      
 ├── routes/          
 ├── services/          
