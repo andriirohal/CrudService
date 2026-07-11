@@ -1,8 +1,9 @@
 import { Router } from "express";
-export const router = Router();
 
 import * as controllers from "../controllers";
 import { validateId } from "../middlewares";
+
+export const router = Router();
 
 router.get("/", controllers.getAllProductsController);
 router.post("/", controllers.createProductController);
