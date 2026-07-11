@@ -14,14 +14,6 @@
     "express": "^5.2.1",
     "pg": "^8.22.0"
   },
-  "imports": {
-    "#config": "./src/config/index.ts",
-    "#controllers": "./src/controllers/index.ts",
-    "#middlewares": "./src/middlewares/index.ts",
-    "#routes": "./src/routes/index.ts",
-    "#services": "./src/services/index.ts",
-    "#types": "./src/types/index.ts"
-  },
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
