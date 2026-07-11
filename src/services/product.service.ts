@@ -1,5 +1,5 @@
-import { Product, ProductInput, Result } from "../types";
-import { pool } from "../config";
+import type { Product, ProductInput, Result } from "#types";
+import { pool } from "#config";
 
 const isValidPrice = (price: unknown): price is number =>
   typeof price === "number" && Number.isFinite(price) && price >= 0;
